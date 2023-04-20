@@ -316,9 +316,9 @@ Below are links to modules:
 <ul>
 <li> <a href="https://github.com/QuDataAI/IceCube/">IceCube-Dataset-kaggle</a> - сreating a dataset for transformer;
 <li> <a href="https://github.com/QuDataAI/IceCube/">IceCube-Transformer-kaggle</a> - transformer train;
-<li> <a href="https://github.com/QuDataAI/IceCube/">IceCube-GNN-train</a> - GNN train;
+<li> <a href="https://github.com/QuDataAI/IceCube/kaggle_2023/IceCube_GNN_train_colab.ipynb">IceCube-GNN-train-colab</a> - GNN train;
 <li> <a href="https://github.com/QuDataAI/IceCube/">IceCube-Ensemble-train</a> - Ensemble train;
-<li> <a href="https://github.com/QuDataAI/IceCube/">IceCube-Ensemble-submit</a> - Ensemble submission;
+<li> <a href="https://www.kaggle.com/andreybeyn/icecube-ensemble-submit">IceCube-Ensemble-submit</a> - Ensemble submission;
 </ul>
 
 <a id="not_done"></a> 
