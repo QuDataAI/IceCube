@@ -32,7 +32,6 @@ The solution has the following structure:
 
 <h3>Model</h3>
 During the competition, we made many changes to the architecture of the graph neural network (described in detail on the https://qudata.com/projects/icecube-neutrino/en/gnn.html), its final state:
-<br>
 
 ![](https://www.googleapis.com/download/storage/v1/b/kaggle-forum-message-attachments/o/inbox%2F1667828%2F000a4894518c3090f4fad6146a865c13%2Fgnn_arch.png?generation=1681914695253186&alt=media)
 
@@ -51,7 +50,7 @@ We retrained the model on all batches, except for the last one; wich we were use
 <h4>Adding another layer (1.012 &rarr; 1.007)</h4>
 
 Having a trained network, we tried to add another layer <b class="norm">EdgeConv</b> to it. In order not to learn from scratch, all layers in the new architecture were frozen except for the new one.
-<br>
+&nbsp;
 
 ![](https://www.googleapis.com/download/storage/v1/b/kaggle-forum-message-attachments/o/inbox%2F1667828%2Fc2015199cfa3d81a4f028d61458c239d%2Fgnn_plus_layer.png?generation=1681919370984185&alt=media)
 
@@ -142,7 +141,7 @@ Its task was to increase the number of features to <b class="norm">E=128</b>.
 The resulting tensor <b class="norm">(B,T,E)</b> was fed to a chain of 10&ndash;12 transformer blocks.
 Each pulse, as a result of the mechanism of attention, "interacted" with all the pulses in the sequence.
 As a result of the work of the transformer, the pulses received new features in the space of the same dimension.
-<br>
+&nbsp;
  
 ![](https://www.googleapis.com/download/storage/v1/b/kaggle-forum-message-attachments/o/inbox%2F1667828%2Fd1126ccc989cb06af312055fc9185066%2Ftransformer_00.png?generation=1681927827258638&alt=media)
 
@@ -170,8 +169,6 @@ as well as a version in which the transformer consisted of two parallel chains o
 The feasibility of such architectural modifications requires further research.
 </p>
 
-<!--------------------------------------------------------------------------------------->
-<hr>
 <a id="dataset"></a>
 <h3>Dataset</h3>
 
@@ -199,8 +196,6 @@ batch_size = min(int(batch_size * (T_max/T)**2),  batch_max)
 This led to approximately the same memory consumption for batches with long and short sequences.
 </p>
 
-<!--------------------------------------------------------------------------------------->
-<hr>
 <a id="lr"></a>
 <h3>Training implementation</h3>
 <p>
@@ -209,7 +204,7 @@ An error of the order of 1.020 when learning from scratch is achieved in 60-70 m
 The total time on the standard T4 card is about 12 hours.
 This stage was done at a constant learning rate lr=1e-3 with the Adam optimizer:
 </p>
-<br>
+&nbsp;
 
 ![](https://www.googleapis.com/download/storage/v1/b/kaggle-forum-message-attachments/o/inbox%2F1667828%2F6bf188353b365fde71a4e1a94fe91b82%2Fexp_large_01.png?generation=1681973550189176&alt=media)
 
@@ -227,7 +222,7 @@ During the training process, we analyzed the value of the weights on various blo
 and  gradient propagation through them. A typical analysis chart looked like this
 (see details in <a href="https://qudata.com/projects/icecube-neutrino/en/transformer.html">our report</a>):
 </p>
-<br>
+&nbsp;
 
 ![](https://www.googleapis.com/download/storage/v1/b/kaggle-forum-message-attachments/o/inbox%2F1667828%2F2cd7550542fa9f05041b1d8266aa9756%2Fexp_large_grad_01.png?generation=1681973578263913&alt=media)
 
@@ -289,8 +284,6 @@ In this case, the regression weights of the models had the form:
 gnn_1: 0.934,  gnn_2: 1.346,  gnn_3: 0.753, att_1: 1.466, att_2: 0.477
 </pre>
 
-<!--------------------------------------------------------------------------------------->
-<hr>
 <a id="train"></a>
 <h2>Training Ensemble</h2>
 <p>
@@ -328,7 +321,6 @@ Below are links to modules:
 <li> <a href="https://github.com/QuDataAI/IceCube/">IceCube-Ensemble-submit</a> - Ensemble submission;
 </ul>
 
-<hr>
 <a id="not_done"></a> 
 <h3>What have not been done</h3>
 
