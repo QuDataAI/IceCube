@@ -321,7 +321,7 @@ Below are links to modules (links will be available soon):
 <li> <a href="https://github.com/QuDataAI/IceCube/blob/main/kaggle_2023/IceCube-Ensemble-train.ipynb">IceCube-Ensemble-train</a> - Ensemble train;
 <li> <a href="https://www.kaggle.com/andreybeyn/icecube-ensemble-submit">IceCube-Ensemble-submit</a> - Ensemble submission;,
 <li> <a href="https://www.kaggle.com/code/synset/icecube-qudata-line-fit-method">IceCube_QuData_Line-fit_Method</a> - modifications of Line-fit method;
-<li> <a href="https://www.kaggle.com/code/synset/icecube-qudata-anisotropy">IceCube_QuData_Line-fit_Method</a> - anisotropy analyses;
+<li> <a href="https://www.kaggle.com/code/synset/icecube-qudata-anisotropy">IceCube_QuData_Anisotropy</a> - anisotropy analyses;
 </ul>
 
 <a id="not_done"></a> 
