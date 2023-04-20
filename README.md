@@ -33,6 +33,7 @@ The solution has the following structure:
 <h3>Model</h3>
 During the competition, we made many changes to the architecture of the graph neural network (described in detail on the https://qudata.com/projects/icecube-neutrino/en/gnn.html), its final state:
 <br>
+
 ![](https://www.googleapis.com/download/storage/v1/b/kaggle-forum-message-attachments/o/inbox%2F1667828%2F000a4894518c3090f4fad6146a865c13%2Fgnn_arch.png?generation=1681914695253186&alt=media)
 
 The input for this model is the graph. Each node corresponds to the pulse, and the features are the features of the pulse combined with the aggregated features of the event. To construct the topology of the graph, the <b>knn</b> algorithm is used. The resulting graph sequentially passes through layers, each of which modifies the feature space and also updates its topology. The outputs of all layers are combined and fed to the layer <b class="norm">Layers MLP</b> in which the number of features is reduced to 256. Then a pooling operation is performed in which the features of all nodes of the graph are aggregated by functions <b class="norm">min, max, mean</b>. At the last node <b class="norm">Classification MLP</b> the resulting embedding is converted into class id and each class is responsible for its own direction.
@@ -51,6 +52,7 @@ We retrained the model on all batches, except for the last one; wich we were use
 
 Having a trained network, we tried to add another layer <b class="norm">EdgeConv</b> to it. In order not to learn from scratch, all layers in the new architecture were frozen except for the new one.
 <br>
+
 ![](https://www.googleapis.com/download/storage/v1/b/kaggle-forum-message-attachments/o/inbox%2F1667828%2Fc2015199cfa3d81a4f028d61458c239d%2Fgnn_plus_layer.png?generation=1681919370984185&alt=media)
 
 In the frozen layers, weights were loaded from the model retrained at the previous stage and training continued.
@@ -141,6 +143,7 @@ The resulting tensor <b class="norm">(B,T,E)</b> was fed to a chain of 10&ndash;
 Each pulse, as a result of the mechanism of attention, "interacted" with all the pulses in the sequence.
 As a result of the work of the transformer, the pulses received new features in the space of the same dimension.
 <br>
+ 
 ![](https://www.googleapis.com/download/storage/v1/b/kaggle-forum-message-attachments/o/inbox%2F1667828%2Fd1126ccc989cb06af312055fc9185066%2Ftransformer_00.png?generation=1681927827258638&alt=media)
 
 Next, the Integrator block converted the transformer output tensor <b class="norm">(B,T,E)</b> into a tensor of <b class="norm">(B,E')</b> dimensions.
@@ -207,6 +210,7 @@ The total time on the standard T4 card is about 12 hours.
 This stage was done at a constant learning rate lr=1e-3 with the Adam optimizer:
 </p>
 <br>
+
 ![](https://www.googleapis.com/download/storage/v1/b/kaggle-forum-message-attachments/o/inbox%2F1667828%2F6bf188353b365fde71a4e1a94fe91b82%2Fexp_large_01.png?generation=1681973550189176&alt=media)
 
 <p>
@@ -224,6 +228,7 @@ and  gradient propagation through them. A typical analysis chart looked like thi
 (see details in <a href="https://qudata.com/projects/icecube-neutrino/en/transformer.html">our report</a>):
 </p>
 <br>
+
 ![](https://www.googleapis.com/download/storage/v1/b/kaggle-forum-message-attachments/o/inbox%2F1667828%2F2cd7550542fa9f05041b1d8266aa9756%2Fexp_large_grad_01.png?generation=1681973578263913&alt=media)
 
 <h2>Ensemble set-up</h2>
@@ -307,6 +312,7 @@ The best metric, as determined by the validation on the first 5 batches, gave th
 Below are some typical learning curves:
 </p>
 <br>
+
 ![](https://www.googleapis.com/download/storage/v1/b/kaggle-forum-message-attachments/o/inbox%2F1667828%2F2342fe7cc1946eaaee3ca0f42d8a4339%2Fensemble_train.png?generation=1681973858282499&alt=media)
 
 <h3>Source code</h3>
