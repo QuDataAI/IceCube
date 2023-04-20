@@ -313,13 +313,15 @@ Below are some typical learning curves:
 The source code of our solutions can be found on <a href="https://github.com/QuDataAI/IceCube">https://github.com/QuDataAI/IceCube</a> and in Kaggle public
 notebooks
 <p>
-Below are links to modules:
+Below are links to modules (links will be available soon):
 <ul>
-<li> <a href="https://github.com/QuDataAI/IceCube/">IceCube-Dataset-kaggle</a> - сreating a dataset for transformer;
-<li> <a href="https://github.com/QuDataAI/IceCube/">IceCube-Transformer-kaggle</a> - transformer train;
+<li> <a href="https://github.com/QuDataAI/IceCube/blob/main/kaggle_2023/IceCube-Dataset-kaggle.ipynb">IceCube-Dataset-kaggle</a> - сreating a dataset for transformer;
+<li> <a href="https://github.com/QuDataAI/IceCube/blob/main/kaggle_2023/IceCube-Transformer-kaggle.ipynb">IceCube-Transformer-kaggle</a> - transformer train;
 <li> <a href="https://github.com/QuDataAI/IceCube/blob/main/kaggle_2023/IceCube_GNN_train_colab.ipynb">IceCube-GNN-train-colab</a> - GNN train;
-<li> <a href="https://github.com/QuDataAI/IceCube/">IceCube-Ensemble-train</a> - Ensemble train;
-<li> <a href="https://www.kaggle.com/andreybeyn/icecube-ensemble-submit">IceCube-Ensemble-submit</a> - Ensemble submission;
+<li> <a href="https://github.com/QuDataAI/IceCube/blob/main/kaggle_2023/IceCube-Ensemble-train.ipynb">IceCube-Ensemble-train</a> - Ensemble train;
+<li> <a href="https://www.kaggle.com/andreybeyn/icecube-ensemble-submit">IceCube-Ensemble-submit</a> - Ensemble submission;,
+<li> <a href="https://www.kaggle.com/code/synset/icecube-qudata-line-fit-method">IceCube_QuData_Line-fit_Method</a> - modifications of Line-fit method;
+<li> <a href="https://www.kaggle.com/code/synset/icecube-qudata-anisotropy">IceCube_QuData_Line-fit_Method</a> - anisotropy analyses;
 </ul>
 
 <a id="not_done"></a> 
