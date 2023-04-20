@@ -310,9 +310,10 @@ Below are some typical learning curves:
 
 <h3>Source code</h3>
 <p>
-The source code of all our solutions can be found on <a href="https://github.com/QuDataAI/IceCube">https://github.com/QuDataAI/IceCube</a>
+The source code of our solutions can be found on <a href="https://github.com/QuDataAI/IceCube">https://github.com/QuDataAI/IceCube</a> and in Kaggle public
+notebooks
+<p>
 Below are links to modules:
-
 <ul>
 <li> <a href="https://github.com/QuDataAI/IceCube/">IceCube-Dataset-kaggle</a> - сreating a dataset for transformer;
 <li> <a href="https://github.com/QuDataAI/IceCube/">IceCube-Transformer-kaggle</a> - transformer train;
