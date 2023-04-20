@@ -224,6 +224,16 @@ and  gradient propagation through them. A typical analysis chart looked like thi
 
 ![](https://www.googleapis.com/download/storage/v1/b/kaggle-forum-message-attachments/o/inbox%2F1667828%2F2cd7550542fa9f05041b1d8266aa9756%2Fexp_large_grad_01.png?generation=1681973578263913&alt=media)
 
+<h2>Ensemble set-up</h2>
+
+<p>
+
+The results of the architectures we trained (<a href="transformer.html">Transformer</a> and <a href="gnn.html">GNN</a>) were not strongly correlated with each other.
+This made it possible to form ensembles of models, which gave a significant improvement in the final metric.
+In addition, thanks to the remarkably large dataset provided by the organizers, additional progress in the metric could be obtained using the trained ensemble.
+The general architecture of the ensemble looked like:
+</p>
+
 <p>
 <h2>Ensemble Models</h2>
 <p>
