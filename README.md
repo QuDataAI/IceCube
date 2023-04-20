@@ -9,6 +9,7 @@ Taking part in a big astrophysics experiment was novel and exciting, and we hope
 Our report turned out to be quite large, so a more detailed version of it was posted on the site <a href="https://qudata.com/projects/icecube-neutrino/en/">https://qudata.com/projects/icecube-neutrino/en/</a>
 <p> 
 The solution has the following structure:
+</p>
 
 ![](https://www.googleapis.com/download/storage/v1/b/kaggle-forum-message-attachments/o/inbox%2F1667828%2Fd27747a4b9d7f2eb613032789cc095a0%2Fcommon_arch.png?generation=1681914442238565&alt=media)
 
