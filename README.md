@@ -7,6 +7,7 @@ Taking part in a big astrophysics experiment was novel and exciting, and we hope
 
 <h2>General architecture</h2>
 Our report turned out to be quite large, so a more detailed version of it was posted on the site <a href="https://qudata.com/projects/icecube-neutrino/en/">https://qudata.com/projects/icecube-neutrino/en/</a>
+<p> 
 The solution has the following structure:
 
 ![](https://www.googleapis.com/download/storage/v1/b/kaggle-forum-message-attachments/o/inbox%2F1667828%2Fd27747a4b9d7f2eb613032789cc095a0%2Fcommon_arch.png?generation=1681914442238565&alt=media)
@@ -271,9 +272,9 @@ Simply averaging the vectors predicted by each model resulted in a <b class="gre
 </p>
 <p>
 Next, we built an ensemble with trainable weights (the multiplier of each model):
-$$
-\mathbf{n} = w_1\,\mathbf{n}_1 + ...+ w_5\,\mathbf{n}_5
-$$
+<center>
+<b>n</b> = w<sub>1</sub> <b>n</b><sub>1</sub> + ... + w<sub>5</sub> <b>n</b><sub>5</sub>
+</center>
 This reduced the error to <b class="green">0.9827</b>.
 In this case, the regression weights of the models had the form:
 </p>
@@ -310,12 +311,14 @@ Below are some typical learning curves:
 <h3>Source code</h3>
 <p>
 The source code of all our solutions can be found on <a href="https://github.com/QuDataAI/IceCube">https://github.com/QuDataAI/IceCube</a>
-Below are links to folders for each module
+Below are links to modules:
 
 <ul>
-<li> <a href="https://github.com/QuDataAI/IceCube/gnn">GNN</a> - train, inference;
-<li> <a href="https://github.com/QuDataAI/IceCube/transformer">Transformer</a> - dataset prepare, train;
-<li> <a href="https://github.com/QuDataAI/IceCube/ensemble">Ensemble</a> - train, submission;
+<li> <a href="https://github.com/QuDataAI/IceCube/">IceCube-Dataset-kaggle</a> - сreating a dataset for transformer;
+<li> <a href="https://github.com/QuDataAI/IceCube/">IceCube-Transformer-kaggle</a> - transformer train;
+<li> <a href="https://github.com/QuDataAI/IceCube/">IceCube-GNN-train</a> - GNN train;
+<li> <a href="https://github.com/QuDataAI/IceCube/">IceCube-Ensemble-train</a> - Ensemble train;
+<li> <a href="https://github.com/QuDataAI/IceCube/">IceCube-Ensemble-submit</a> - Ensemble submission;
 </ul>
 
 <hr>
